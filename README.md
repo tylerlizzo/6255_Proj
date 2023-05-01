@@ -23,13 +23,10 @@ This file has three main functions for implementing a beamformer:
 * `beamform(beamform,mc_spectrums,Fs,fft_len)` applies the provided beamformer to the spectrums of the multi-channel data.
 
 #### generate_mc_data.py
-This file takes in sound and noise files and generates synthetic multi-channel data.
-
+This file takes in sound and noise files (and direction angle) and generates synthetic multi-channel data.
 `python generate_mc_data.py -sf /path/to/sound/file -nf /path/to/noise/file -dir 30 -out /path/to/output/directory`
 
 #### utils.py
-
-
-* `gen_data_gaussian(mu,k,T)` generates an numpy array for k-arms according to the means in mu
-* `gen_data_gaussian_parts(mu,k,parts,T)` generates an numpy array for k-arms with discrete jumps in means according to mu
-* `gen_data_gaussian_shift(mu,k,shift,T)` generates an numpy array for k-arms according to the means in mu and gradual shifts in shift
+* `multichannel_load(directory,num_channels)` loads the multi-channel data from disc to np arrays.
+* `multichannel_spectrum(mc_data,fft_len)` takes FFTs for all of the multiple channel data.
+* `steering_vector(direct,Fs,fft_len,ang_vec,mic_data)` calculates the steering vector for the beamformer.
