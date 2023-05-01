@@ -3,6 +3,15 @@ import soundfile as sf
 from scipy.fftpack import fft
 import scipy.constants as sci_c
 
+def spectrogram(signal,Fs):
+    f,t,sxx = signal.spectrogram(x,Fs,nfft=8192)
+    plt.pcolormesh(t, f, sxx)
+    plt.ylabel('Frequency [Hz]')
+    plt.xlabel('Time [sec]')
+    plt.ylim([0,1000])
+    plt.show()
+    return
+
 def multichannel_load(directory,num_channels):
     L = len(sf.read(directory.replace('[]','1'))[0])
     wavs = np.zeros((num_channels,L))
