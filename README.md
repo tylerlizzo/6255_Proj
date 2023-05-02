@@ -4,6 +4,9 @@
 ## Abstract
 
 ## Code Organization
+### Legacy Code
+This directory contains some work by Joy on a previous project. We used some of this code as a starting point that we built upon. Her original code came from her undergraduate thesis, and builds upon this Github: https://github.com/fgnt/nn-gev.
+
 ### Data Directory
 This directory contains one sample multiple channel utterance. It also contains the demo generation audio and output for our synthetic multiple channel data generation script. It does not contain any of the CHiME-4 dataset that we ran on.
 
