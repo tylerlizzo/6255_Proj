@@ -2,6 +2,7 @@
 # Group 16: Multiple-Channel Speech Enhancement
 
 ## Abstract
+In this project, we compared many different methods in speech enhancement. To obtain a better effect, we put the system in two steps: denoising the signals in every single channel and then doing the beamforming. Our main focus is the two beamforming methods, minimum variance distortionless response (MVDR) and generalized eigenvalue (GEV), for the signals collected in a microphone array. We implemented quite a few denoising methods including spectral subtraction, adaptive Wiener filtering, linear prediction coding (LPC), and the Long Short Term Memory neural network (LSTM). We also referenced some methods like the signal modeling based on Complex Gaussian Mixture Model and implemented in Expectation Maximization (EM) iterations. We select a method from filtering, statistical learning, and deep learning respectively for the signals in two, four, and six channels respectively, then connect the denoising with the two beamforming algorithms. We perform the evaluation of all of our different settings on PESQ, STOI, and WER.
 
 ## Code Organization
 ### Legacy Code
