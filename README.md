@@ -16,7 +16,7 @@ This directory contains utility function relating to multiple channel data and b
 #### beamform.py
 This file has three main functions for implementing a beamformer:
 * `corr_matrix(mc_data,ang_vec,Fs,fft_len)` generates a correlation matrix between the multiple channel data and the ideal direction signal.
-* `MVDR(mat,steer_vec,ang_vec,Fs,fft_len)` generates an MVDR beamformer based off the inputs.
+* `MVDR(mat,steer_vec,ang_vec,Fs,fft_len)` generates an MVDR beamformer based off the inputs. This is based off the following paper: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1614.
 * `beamform(beamform,mc_spectrums,Fs,fft_len)` applies the provided beamformer to the spectrums of the multi-channel data.
 
 #### generate_mc_data.py
