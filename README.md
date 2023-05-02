@@ -24,6 +24,7 @@ This file takes in sound and noise files (and direction angle) and generates syn
 `python generate_mc_data.py -sf /path/to/sound/file -nf /path/to/noise/file -dir 30 -out /path/to/output/directory`
 
 #### utils.py
+* `spectrogram(signal,Fs)` computes and plots a spectrogram for the inputted signal.
 * `multichannel_load(directory,num_channels)` loads the multi-channel data from disc to np arrays.
 * `multichannel_spectrum(mc_data,fft_len)` takes FFTs for all of the multiple channel data.
 * `steering_vector(direct,Fs,fft_len,ang_vec,mic_data)` calculates the steering vector for the beamformer.
