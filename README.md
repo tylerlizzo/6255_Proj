@@ -28,7 +28,7 @@ This file takes in sound and noise files (and direction angle) and generates syn
 * `multichannel_spectrum(mc_data,fft_len)` takes FFTs for all of the multiple channel data.
 * `steering_vector(direct,Fs,fft_len,ang_vec,mic_data)` calculates the steering vector for the beamformer.
 
-### Wiener Filtering Directory
-This directory contains MATLAB files related to our wiener filtering and spectral subtraction.
+### filters Directory
+This directory contains MATLAB files related to our filtering processes:
 * `denoise2(y,fs,noiseLengthSec,nfft,noverlap)` implements spectral subtraction on a passed-in signal.
 * `wienerFilter(y,n,nfft,noverlap,fs)` implements Wiener filtering on a passed-in signal.
